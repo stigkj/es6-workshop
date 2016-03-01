@@ -5,6 +5,7 @@
     - `npm run test:watch`
     - `npm run webpack:watch`
 
+Bra ressurs: http://exploringjs.com/es6/
 
 ## Oppgave 1
 Oppgave 1 er å implementere intro.js metodene slik at testene i introTest.js passerer.
