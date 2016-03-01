@@ -1,23 +1,21 @@
-import foo from "../js/modules/defaultModule.js";
-import {add, multiply} from "../js/modules/mathModule.js";
+// import stuff here
 import bar from "../js/modules/moduleWithDependency.js";
 
 describe("modules", () => {
-    it("should use a module with default export", () => {
+    //implement default export in defaultModule.js, and import it in this file.
+    it.skip("should use a module with default export", () => {
         let result = foo(2);
         assert.equals(result, 2);
     });
 
-    it("should use a module with multiple exports", () => {
+    // implement mutiple methods in mathModule.js, and export them and import "multiply" and "add" in this file
+    it.skip("should use a module with multiple exports", () => {
         assert.equals(multiply(2,4), 8);
         assert.equals(add(2,4), 6);
     });
 
-    it("should mock a modules dependencies", () => {
-        bar.__Rewire__("foo", () => 2);
-
+    // Must mock the foo import in moduleWithDependency.js, using rewire.
+    it.skip("should mock a modules dependencies", () => {
         assert.equals(bar(7), 2);
-
-        bar.__ResetDependency__("url");
     });
 });
